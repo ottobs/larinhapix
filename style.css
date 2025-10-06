@@ -1,150 +1,312 @@
+/* Paleta de cores e fontes para o currículo */
+:root {
+    --primary-color: #3f51b5; /* Azul índigo */
+    --secondary-color: #5c6bc0; /* Azul mais claro */
+    --accent-color: #ff9800; /* Laranja (para botões/destaques) */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --dark-gray: #555;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: var(--font-body);
+    background-color: #fff;
+    color: var(--text-color);
     line-height: 1.6;
 }
+
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
 }
-section {
-    padding: 80px 0;
-    text-align: center;
-}
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-.hero {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 120px 0;
-    text-align: center;
-}
-.hero h1 {
-    font-size: 3.5em;
-    font-weight: 900;
-    margin-bottom: 0.2em;
-    line-height: 1.1;
-}
-.hero .slogan {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    opacity: 0.8;
-}
-.cta-button {
-    background-color: #8A2BE2;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-.cta-button:hover {
-    transform: scale(1.05);
-    background-color: #9932CC;
-}
-.problem {
-    background-color: #fff;
-}
-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-section p {
-    max-width: 700px;
-    margin: 0 auto;
-}
-.steps {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 50px;
-}
-.step {
-    flex-basis: 30%;
-}
-.step h3 {
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-.step h3 span {
-    background-color: #8A2BE2;
-    color: #fff;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8em;
-}
-.features {
-    background-color: #fff;
-}
-.feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 50px;
-    text-align: left;
-}
-.feature-item {
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-.feature-item h4 {
-    font-size: 1.3em;
-    margin-top: 0;
-}
-.testimonial {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.testimonial blockquote {
-    margin: 0;
-    font-size: 1.2em;
-    font-style: italic;
-}
-.testimonial cite {
-    display: block;
-    margin-top: 10px;
-    font-weight: 700;
-    color: #555;
-}
-.footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    text-align: center;
+
+.section {
     padding: 60px 0;
 }
-.footer h2 {
-    font-size: 2em;
+
+.alt-bg {
+    background-color: var(--light-gray);
 }
-.footer .cta-button {
-    margin-top: 10px;
+
+.text-center {
+    text-align: center;
 }
-.footer-text {
-    margin-top: 40px;
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.button, .button-small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .button-small:hover {
+    background-color: var(--secondary-color);
+}
+
+.button-small {
     font-size: 0.9em;
-    opacity: 0.6;
+    padding: 8px 15px;
 }
-.footer-text p {
-    margin: 5px 0;
+
+/* NAVEGAÇÃO */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-button {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: #e68900;
+}
+
+/* HERO (Perfil) */
+.hero {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-top: 0;
+}
+
+/* Experiência e Educação */
+.job-item, .education-item {
+    background-color: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.job-item h3, .education-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.job-item .period, .education-item .period, .institution {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.job-item ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.job-item li {
+    margin-bottom: 5px;
+}
+
+/* Habilidades */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.skill-tag {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    margin: 0 15px 10px;
+    color: var(--primary-color);
+}
+
+.portfolio-item p {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+/* Contato */
+.contact-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 10px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .job-item, .education-item, .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .history-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .history-content img {
+        width: 80%;
+        max-width: 300px;
+    }
 }
